@@ -1,0 +1,33 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/prajaktakulkarni/Documents/My Pods/Newly/Build/Products/Debug-iphoneos/Pods_Newly.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "Pods-Newly-umbrella.h",
+          'external-contents': "/Users/prajaktakulkarni/Documents/My Pods/Newly/Pods/Target Support Files/Pods-Newly/Pods-Newly-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "Pods_Newly-Swift.h",
+          'external-contents': "/Users/prajaktakulkarni/Documents/My Pods/Newly/Build/Products/Debug-iphoneos/Pods_Newly.framework/Headers/Pods_Newly-Swift.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/prajaktakulkarni/Documents/My Pods/Newly/Build/Products/Debug-iphoneos/Pods_Newly.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/prajaktakulkarni/Documents/My Pods/Newly/Build/Intermediates/Pods.build/Debug-iphoneos/Pods-Newly.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}
