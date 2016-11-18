@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		FF73541E1DDEF20000E1C56B /* Newly.h in Headers */ = {isa = PBXBuildFile; fileRef = FF73541C1DDEF20000E1C56B /* Newly.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FFDEBEF91DDEF55300EBFA02 /* Newly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDEBEF81DDEF55300EBFA02 /* Newly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FF7354191DDEF20000E1C56B /* Newly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Newly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF73541C1DDEF20000E1C56B /* Newly.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Newly.h; sourceTree = "<group>"; };
 		FF73541D1DDEF20000E1C56B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFDEBEF81DDEF55300EBFA02 /* Newly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Newly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,10 +48,19 @@
 		FF73541B1DDEF20000E1C56B /* Newly */ = {
 			isa = PBXGroup;
 			children = (
+				FF7354241DDEF20A00E1C56B /* Classes */,
 				FF73541C1DDEF20000E1C56B /* Newly.h */,
 				FF73541D1DDEF20000E1C56B /* Info.plist */,
 			);
 			path = Newly;
+			sourceTree = "<group>";
+		};
+		FF7354241DDEF20A00E1C56B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				FFDEBEF81DDEF55300EBFA02 /* Newly.swift */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +107,7 @@
 					FF7354181DDEF20000E1C56B = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = DUXG8V348H;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -132,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFDEBEF91DDEF55300EBFA02 /* Newly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +253,7 @@
 		FF7354221DDEF20100E1C56B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = DUXG8V348H;
@@ -252,6 +266,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = dhirajjadhao.Newly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -259,6 +274,7 @@
 		FF7354231DDEF20100E1C56B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = DUXG8V348H;
@@ -294,6 +310,7 @@
 				FF7354231DDEF20100E1C56B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

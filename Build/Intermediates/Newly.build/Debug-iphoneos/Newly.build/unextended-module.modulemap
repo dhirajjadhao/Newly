@@ -1,0 +1,10 @@
+framework module Newly {
+  umbrella header "Newly.h"
+
+  export *
+  module * { export * }
+}
+
+module Newly.__Swift {
+    exclude header "Newly-Swift.h"
+}
