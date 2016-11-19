@@ -1,0 +1,13 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': '/Users/prajaktakulkarni/Documents/My Pods/Newly/build/Release-iphoneos/Newly.framework/Modules'
+    'contents': [{
+      'type': 'file',
+      'name': 'module.modulemap',
+      'external-contents': '/Users/prajaktakulkarni/Documents/My Pods/Newly/build/Newly.build/Release-iphoneos/Newly.build/unextended-module.modulemap',
+    }]
+  }]
+}

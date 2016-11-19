@@ -8,49 +8,82 @@
 
 import UIKit
 
-protocol NewlyDelegate {
+/// The following protocols are available globally.
+public protocol NewlyDelegate {
     
-    func didTappedUpdate() -> Void
+    /// Called when Newly is tapped.
+    func newlyDidTapped() -> Void
 }
 
-class Newly: NSObject {
+
+/// Newly is a drop in solution to add Twitter/Facebook/Linkedin style, new updates/tweets/posts available button. It can be used to notify user about new content availability and can other actions can be triggers using its delegate method.
+
+public class Newly: NSObject {
     
     //MARK: Internal Constants
-    private var isUpdatedAddedInWindow:Bool = false
-    private let defaultFont = UIFont.systemFont(ofSize: 12.5)
+    private var isUpdatedAddedInWindow:Bool?
+    private var defaultFont:UIFont!
     private let app = UIApplication.shared.delegate
     private var window = UIWindow()
+    private var defaultUpdateHeight:CGFloat!
     
-    private let defaultUpdateHeight:CGFloat = 30
+    //MARK: Properties
     
-    //MARK: Declaration
+    private var update = UIButton()
+    
+    /// Newly Delegate
     public var delegate:NewlyDelegate?
-    public var update = UIButton()
-    static let sharedInstance = Newly()
-
-    public var isUpdateVisible:Bool = false
-    public var hideOnTouch:Bool = true
-    public var animationInterval:TimeInterval = 1.0
-    public var heightOffset:CGFloat = 78.0
-    public var backgroundColor = UIColor(colorLiteralRed: 0, green: 153.0/255.0, blue: 229.0/255.0, alpha: 1.0)
-    public var textColor = UIColor.white
-
     
-    private override init() {
+    /// Whether Newly is currently visible.
+    public var isUpdateVisible = Bool()
+    
+    /// It defines whether Newly should hide on touch, default is true.
+    public var hideOnTouch = Bool()
+    
+    /// Animation interval to show and hide newly on screen.
+    public var animationInterval:TimeInterval?
+    
+    /// Height from top at which Newly should be displayed.
+    public var heightOffset:CGFloat?
+    
+    /// Background colour for Newly
+    public var backgroundColor:UIColor?
+    
+    /// Text colour for Newly
+    public var textColor:UIColor?
+    
+    
+    /// Initializers
+
+    public override init() {
         super.init()
         
-    
+        isUpdatedAddedInWindow = false
+        defaultFont = UIFont.systemFont(ofSize: 12.5)
+        defaultUpdateHeight = 30
+        isUpdateVisible = false
+        hideOnTouch = true
+        animationInterval = 1.0
+        heightOffset = 78.0
+        backgroundColor = UIColor(colorLiteralRed: 0, green: 153.0/255.0, blue: 229.0/255.0, alpha: 1.0)
+        textColor = UIColor.white
     }
     
     
     
-    //MARK: Interface
-
-    func showUpdate(inView:UIViewController, message:String) -> Void {
-       
+    //MARK: Showing and Hiding Newly
+    
+    
+    ///Shows Newly updates available button with animation
+    ///
+    /// - parameter message: text message to be shown in Newly update
+    
+    
+    public func showUpdate(message:String) -> Void {
+        
         window = ((app?.window)!)!
-
-        if !isUpdatedAddedInWindow {
+        
+        if !isUpdatedAddedInWindow! {
             
             var width = message.widthOfString(usingFont: defaultFont)
             if width >= window.frame.width {
@@ -77,9 +110,9 @@ class Newly: NSObject {
             
             isUpdateVisible = true
             
-            UIView.animate(withDuration: animationInterval, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.curveEaseIn, animations: {
+            UIView.animate(withDuration: animationInterval!, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.curveEaseIn, animations: {
                 
-                self.update.frame.origin.y = self.heightOffset
+                self.update.frame.origin.y = self.heightOffset!
                 
                 }, completion: nil)
         }
@@ -89,12 +122,15 @@ class Newly: NSObject {
     }
     
     
-    func hideUpdate() -> Void {
+    
+    /// Hides Newly with animation
+    
+    public func hideUpdate() -> Void {
         
         isUpdateVisible = false
         isUpdatedAddedInWindow = false
         
-        UIView.animate(withDuration: animationInterval, delay: 0.4, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.8, options: UIViewAnimationOptions.curveEaseInOut, animations: {
+        UIView.animate(withDuration: animationInterval!, delay: 0.4, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.8, options: UIViewAnimationOptions.curveEaseInOut, animations: {
             
             self.update.frame.origin.y = -50
             
@@ -102,7 +138,7 @@ class Newly: NSObject {
     }
     
     
-    //MARK: Update Button Tapped
+    //MARK: Update Button Selectors
     
     @objc private func updateButtonTapped() -> Void {
         
@@ -121,18 +157,18 @@ class Newly: NSObject {
             self.hideUpdate()
         }
         
-        didTappedUpdate()
+        newlyDidTapped()
     }
     
     
     
     //MARK: Delegates
     
-    func didTappedUpdate() -> Void{
+    func newlyDidTapped() -> Void{
         
-        delegate?.didTappedUpdate()
+        delegate?.newlyDidTapped()
     }
-
+    
 }
 
 

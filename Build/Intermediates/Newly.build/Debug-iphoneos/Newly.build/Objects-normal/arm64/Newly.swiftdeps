@@ -12,61 +12,56 @@ provides-member:
 - ["SS", "widthOfString"]
 - ["SS", "heightOfString"]
 provides-dynamic-lookup:
-- "sharedInstance"
-- "backgroundColor"
-- "animationInterval"
-- "hideUpdate"
 - "updateButtonTapped"
-- "hideOnTouch"
-- "showUpdate"
-- "didTappedUpdate"
-- "update"
-- "heightOffset"
-- "updateButtonTouchUpInside"
-- "textColor"
 - "isUpdateVisible"
+- "newlyDidTapped"
+- "hideUpdate"
+- "textColor"
+- "backgroundColor"
+- "showUpdate"
+- "updateButtonTouchUpInside"
+- "hideOnTouch"
 depends-top-level:
-- "UIColor"
-- !private "CGAffineTransform"
-- "CGFloat"
-- "NewlyDelegate"
-- "UIWindow"
-- !private "UIView"
-- !private ">="
-- "NSObject"
+- !private "BooleanLiteralType"
+- !private "CGRect"
 - "UIButton"
 - "Bool"
-- "TimeInterval"
-- "UIViewController"
-- "/"
-- "UIFont"
-- !private "CGRect"
-- !private "NSTextAlignment"
-- !private "+"
-- "AssignmentPrecedence"
-- !private "-"
-- !private "UIControlEvents"
-- "Void"
-- !private "Dictionary"
-- "UIApplication"
-- "String"
-- !private "NSFontAttributeName"
-- "BooleanLiteralType"
 - !private "UIControlState"
+- !private "NSFontAttributeName"
+- !private "+"
+- "CGFloat"
 - !private "!"
-- "Newly"
+- "NSObject"
+- !private ">="
+- !private "UIView"
 - !private "UIViewAnimationOptions"
+- "String"
+- "Void"
+- "AssignmentPrecedence"
+- "TimeInterval"
+- "UIColor"
+- !private "Dictionary"
+- !private "UIControlEvents"
+- "UIFont"
+- !private "-"
+- "NewlyDelegate"
+- !private "/"
+- "UIApplication"
+- !private "NSTextAlignment"
+- !private "CGAffineTransform"
+- "UIWindow"
+- "Newly"
 depends-member:
+- ["Ps9AnyObject", "Bool"]
 - !private ["Ps9AnyObject", "CGAffineTransform"]
 - !private ["Ps9AnyObject", "CGRect"]
 - !private ["Ps9AnyObject", "NSTextAlignment"]
-- ["Ps9AnyObject", "Newly"]
 - ["Ps9AnyObject", "UIApplication"]
 - ["Ps9AnyObject", "UIButton"]
-- ["Ps9AnyObject", "UIColor"]
+- !private ["Ps9AnyObject", "UIColor"]
 - !private ["Ps9AnyObject", "UIControlEvents"]
 - !private ["Ps9AnyObject", "UIControlState"]
-- ["Ps9AnyObject", "UIFont"]
+- !private ["Ps9AnyObject", "UIFont"]
 - !private ["Ps9AnyObject", "UIView"]
 - !private ["Ps9AnyObject", "UIViewAnimationOptions"]
 - ["Ps9AnyObject", "UIWindow"]
@@ -81,7 +76,6 @@ depends-member:
 - ["Ps9AnyObject", "defaultFont"]
 - ["Ps9AnyObject", "defaultUpdateHeight"]
 - ["Ps9AnyObject", "delegate"]
-- ["Ps9AnyObject", "didTappedUpdate"]
 - !private ["Ps9AnyObject", "font"]
 - !private ["Ps9AnyObject", "frame"]
 - ["Ps9AnyObject", "heightOffset"]
@@ -92,13 +86,13 @@ depends-member:
 - ["Ps9AnyObject", "isUpdatedAddedInWindow"]
 - !private ["Ps9AnyObject", "layer"]
 - !private ["Ps9AnyObject", "masksToBounds"]
+- ["Ps9AnyObject", "newlyDidTapped"]
 - !private ["Ps9AnyObject", "setTitle"]
 - !private ["Ps9AnyObject", "setTitleColor"]
 - ["Ps9AnyObject", "shared"]
-- ["Ps9AnyObject", "sharedInstance"]
 - ["Ps9AnyObject", "showUpdate"]
 - !private ["Ps9AnyObject", "size"]
-- ["Ps9AnyObject", "systemFont"]
+- !private ["Ps9AnyObject", "systemFont"]
 - !private ["Ps9AnyObject", "textAlignment"]
 - ["Ps9AnyObject", "textColor"]
 - !private ["Ps9AnyObject", "titleLabel"]
@@ -106,12 +100,13 @@ depends-member:
 - ["Ps9AnyObject", "update"]
 - ["Ps9AnyObject", "updateButtonTapped"]
 - ["Ps9AnyObject", "updateButtonTouchUpInside"]
-- ["Ps9AnyObject", "white"]
+- !private ["Ps9AnyObject", "white"]
 - !private ["Ps9AnyObject", "widthOfString"]
 - ["Ps9AnyObject", "window"]
 - ["Ps9AnyObject", ""]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - ["Sb", "deinit"]
+- ["Sb", "init"]
 - !private ["CSo7CALayer", "cornerRadius"]
 - ["CSo7CALayer", "deinit"]
 - !private ["CSo7CALayer", "masksToBounds"]
@@ -143,18 +138,18 @@ depends-member:
 - ["VSC6CGSize", "deinit"]
 - !private ["VSC6CGSize", "height"]
 - !private ["VSC6CGSize", "width"]
+- ["Ps7CVarArg", "Bool"]
 - !private ["Ps7CVarArg", "CGAffineTransform"]
 - !private ["Ps7CVarArg", "CGRect"]
 - !private ["Ps7CVarArg", "Key"]
 - !private ["Ps7CVarArg", "NSFontAttributeName"]
 - !private ["Ps7CVarArg", "NSTextAlignment"]
-- ["Ps7CVarArg", "Newly"]
 - ["Ps7CVarArg", "UIApplication"]
 - ["Ps7CVarArg", "UIButton"]
-- ["Ps7CVarArg", "UIColor"]
+- !private ["Ps7CVarArg", "UIColor"]
 - !private ["Ps7CVarArg", "UIControlEvents"]
 - !private ["Ps7CVarArg", "UIControlState"]
-- ["Ps7CVarArg", "UIFont"]
+- !private ["Ps7CVarArg", "UIFont"]
 - !private ["Ps7CVarArg", "UIView"]
 - !private ["Ps7CVarArg", "UIViewAnimationOptions"]
 - ["Ps7CVarArg", "UIWindow"]
@@ -170,7 +165,6 @@ depends-member:
 - ["Ps7CVarArg", "defaultFont"]
 - ["Ps7CVarArg", "defaultUpdateHeight"]
 - ["Ps7CVarArg", "delegate"]
-- ["Ps7CVarArg", "didTappedUpdate"]
 - !private ["Ps7CVarArg", "font"]
 - !private ["Ps7CVarArg", "frame"]
 - ["Ps7CVarArg", "heightOffset"]
@@ -181,13 +175,13 @@ depends-member:
 - ["Ps7CVarArg", "isUpdatedAddedInWindow"]
 - !private ["Ps7CVarArg", "layer"]
 - !private ["Ps7CVarArg", "masksToBounds"]
+- ["Ps7CVarArg", "newlyDidTapped"]
 - !private ["Ps7CVarArg", "setTitle"]
 - !private ["Ps7CVarArg", "setTitleColor"]
 - ["Ps7CVarArg", "shared"]
-- ["Ps7CVarArg", "sharedInstance"]
 - ["Ps7CVarArg", "showUpdate"]
 - !private ["Ps7CVarArg", "size"]
-- ["Ps7CVarArg", "systemFont"]
+- !private ["Ps7CVarArg", "systemFont"]
 - !private ["Ps7CVarArg", "textAlignment"]
 - ["Ps7CVarArg", "textColor"]
 - !private ["Ps7CVarArg", "titleLabel"]
@@ -195,7 +189,7 @@ depends-member:
 - ["Ps7CVarArg", "update"]
 - ["Ps7CVarArg", "updateButtonTapped"]
 - ["Ps7CVarArg", "updateButtonTouchUpInside"]
-- ["Ps7CVarArg", "white"]
+- !private ["Ps7CVarArg", "white"]
 - !private ["Ps7CVarArg", "widthOfString"]
 - ["Ps7CVarArg", "window"]
 - ["Ps7CVarArg", ""]
@@ -204,18 +198,18 @@ depends-member:
 - !private ["Ps10Comparable", "NSFontAttributeName"]
 - !private ["Ps10Comparable", "size"]
 - !private ["Ps10Comparable", "widthOfString"]
+- ["Ps28CustomDebugStringConvertible", "Bool"]
 - !private ["Ps28CustomDebugStringConvertible", "CGAffineTransform"]
 - !private ["Ps28CustomDebugStringConvertible", "CGRect"]
 - !private ["Ps28CustomDebugStringConvertible", "Key"]
 - !private ["Ps28CustomDebugStringConvertible", "NSFontAttributeName"]
 - !private ["Ps28CustomDebugStringConvertible", "NSTextAlignment"]
-- ["Ps28CustomDebugStringConvertible", "Newly"]
 - ["Ps28CustomDebugStringConvertible", "UIApplication"]
 - ["Ps28CustomDebugStringConvertible", "UIButton"]
-- ["Ps28CustomDebugStringConvertible", "UIColor"]
+- !private ["Ps28CustomDebugStringConvertible", "UIColor"]
 - !private ["Ps28CustomDebugStringConvertible", "UIControlEvents"]
 - !private ["Ps28CustomDebugStringConvertible", "UIControlState"]
-- ["Ps28CustomDebugStringConvertible", "UIFont"]
+- !private ["Ps28CustomDebugStringConvertible", "UIFont"]
 - !private ["Ps28CustomDebugStringConvertible", "UIView"]
 - !private ["Ps28CustomDebugStringConvertible", "UIViewAnimationOptions"]
 - ["Ps28CustomDebugStringConvertible", "UIWindow"]
@@ -231,7 +225,6 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "defaultFont"]
 - ["Ps28CustomDebugStringConvertible", "defaultUpdateHeight"]
 - ["Ps28CustomDebugStringConvertible", "delegate"]
-- ["Ps28CustomDebugStringConvertible", "didTappedUpdate"]
 - !private ["Ps28CustomDebugStringConvertible", "font"]
 - !private ["Ps28CustomDebugStringConvertible", "frame"]
 - !private ["Ps28CustomDebugStringConvertible", "height"]
@@ -243,14 +236,14 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "isUpdatedAddedInWindow"]
 - !private ["Ps28CustomDebugStringConvertible", "layer"]
 - !private ["Ps28CustomDebugStringConvertible", "masksToBounds"]
+- ["Ps28CustomDebugStringConvertible", "newlyDidTapped"]
 - !private ["Ps28CustomDebugStringConvertible", "origin"]
 - !private ["Ps28CustomDebugStringConvertible", "setTitle"]
 - !private ["Ps28CustomDebugStringConvertible", "setTitleColor"]
 - ["Ps28CustomDebugStringConvertible", "shared"]
-- ["Ps28CustomDebugStringConvertible", "sharedInstance"]
 - ["Ps28CustomDebugStringConvertible", "showUpdate"]
 - !private ["Ps28CustomDebugStringConvertible", "size"]
-- ["Ps28CustomDebugStringConvertible", "systemFont"]
+- !private ["Ps28CustomDebugStringConvertible", "systemFont"]
 - !private ["Ps28CustomDebugStringConvertible", "textAlignment"]
 - ["Ps28CustomDebugStringConvertible", "textColor"]
 - !private ["Ps28CustomDebugStringConvertible", "titleLabel"]
@@ -258,7 +251,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "update"]
 - ["Ps28CustomDebugStringConvertible", "updateButtonTapped"]
 - ["Ps28CustomDebugStringConvertible", "updateButtonTouchUpInside"]
-- ["Ps28CustomDebugStringConvertible", "white"]
+- !private ["Ps28CustomDebugStringConvertible", "white"]
 - !private ["Ps28CustomDebugStringConvertible", "width"]
 - !private ["Ps28CustomDebugStringConvertible", "widthOfString"]
 - ["Ps28CustomDebugStringConvertible", "window"]
@@ -268,7 +261,7 @@ depends-member:
 - !private ["Ps29CustomPlaygroundQuickLookable", "NSFontAttributeName"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "height"]
-- !private ["Ps29CustomPlaygroundQuickLookable", "init"]
+- ["Ps29CustomPlaygroundQuickLookable", "init"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "origin"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "size"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "width"]
@@ -280,25 +273,25 @@ depends-member:
 - !private ["Ps17CustomReflectable", "Value"]
 - !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
 - !private ["Ps17CustomReflectable", "height"]
-- !private ["Ps17CustomReflectable", "init"]
+- ["Ps17CustomReflectable", "init"]
 - !private ["Ps17CustomReflectable", "origin"]
 - !private ["Ps17CustomReflectable", "size"]
 - !private ["Ps17CustomReflectable", "width"]
 - !private ["Ps17CustomReflectable", "widthOfString"]
 - !private ["Ps17CustomReflectable", "x"]
 - !private ["Ps17CustomReflectable", "y"]
+- ["Ps23CustomStringConvertible", "Bool"]
 - !private ["Ps23CustomStringConvertible", "CGAffineTransform"]
 - !private ["Ps23CustomStringConvertible", "CGRect"]
 - !private ["Ps23CustomStringConvertible", "Key"]
 - !private ["Ps23CustomStringConvertible", "NSFontAttributeName"]
 - !private ["Ps23CustomStringConvertible", "NSTextAlignment"]
-- ["Ps23CustomStringConvertible", "Newly"]
 - ["Ps23CustomStringConvertible", "UIApplication"]
 - ["Ps23CustomStringConvertible", "UIButton"]
-- ["Ps23CustomStringConvertible", "UIColor"]
+- !private ["Ps23CustomStringConvertible", "UIColor"]
 - !private ["Ps23CustomStringConvertible", "UIControlEvents"]
 - !private ["Ps23CustomStringConvertible", "UIControlState"]
-- ["Ps23CustomStringConvertible", "UIFont"]
+- !private ["Ps23CustomStringConvertible", "UIFont"]
 - !private ["Ps23CustomStringConvertible", "UIView"]
 - !private ["Ps23CustomStringConvertible", "UIViewAnimationOptions"]
 - ["Ps23CustomStringConvertible", "UIWindow"]
@@ -315,7 +308,6 @@ depends-member:
 - ["Ps23CustomStringConvertible", "defaultFont"]
 - ["Ps23CustomStringConvertible", "defaultUpdateHeight"]
 - ["Ps23CustomStringConvertible", "delegate"]
-- ["Ps23CustomStringConvertible", "didTappedUpdate"]
 - !private ["Ps23CustomStringConvertible", "font"]
 - !private ["Ps23CustomStringConvertible", "frame"]
 - ["Ps23CustomStringConvertible", "heightOffset"]
@@ -326,13 +318,13 @@ depends-member:
 - ["Ps23CustomStringConvertible", "isUpdatedAddedInWindow"]
 - !private ["Ps23CustomStringConvertible", "layer"]
 - !private ["Ps23CustomStringConvertible", "masksToBounds"]
+- ["Ps23CustomStringConvertible", "newlyDidTapped"]
 - !private ["Ps23CustomStringConvertible", "setTitle"]
 - !private ["Ps23CustomStringConvertible", "setTitleColor"]
 - ["Ps23CustomStringConvertible", "shared"]
-- ["Ps23CustomStringConvertible", "sharedInstance"]
 - ["Ps23CustomStringConvertible", "showUpdate"]
 - !private ["Ps23CustomStringConvertible", "size"]
-- ["Ps23CustomStringConvertible", "systemFont"]
+- !private ["Ps23CustomStringConvertible", "systemFont"]
 - !private ["Ps23CustomStringConvertible", "textAlignment"]
 - ["Ps23CustomStringConvertible", "textColor"]
 - !private ["Ps23CustomStringConvertible", "titleLabel"]
@@ -340,7 +332,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", "update"]
 - ["Ps23CustomStringConvertible", "updateButtonTapped"]
 - ["Ps23CustomStringConvertible", "updateButtonTouchUpInside"]
-- ["Ps23CustomStringConvertible", "white"]
+- !private ["Ps23CustomStringConvertible", "white"]
 - !private ["Ps23CustomStringConvertible", "widthOfString"]
 - ["Ps23CustomStringConvertible", "window"]
 - ["Ps23CustomStringConvertible", ""]
@@ -348,17 +340,17 @@ depends-member:
 - !private ["Vs10Dictionary", "Value"]
 - ["Vs10Dictionary", "deinit"]
 - ["Sd", "deinit"]
+- ["Ps9Equatable", "Bool"]
 - !private ["Ps9Equatable", "CGAffineTransform"]
 - !private ["Ps9Equatable", "CGRect"]
 - !private ["Ps9Equatable", "NSFontAttributeName"]
 - !private ["Ps9Equatable", "NSTextAlignment"]
-- ["Ps9Equatable", "Newly"]
 - ["Ps9Equatable", "UIApplication"]
 - ["Ps9Equatable", "UIButton"]
-- ["Ps9Equatable", "UIColor"]
+- !private ["Ps9Equatable", "UIColor"]
 - !private ["Ps9Equatable", "UIControlEvents"]
 - !private ["Ps9Equatable", "UIControlState"]
-- ["Ps9Equatable", "UIFont"]
+- !private ["Ps9Equatable", "UIFont"]
 - !private ["Ps9Equatable", "UIView"]
 - !private ["Ps9Equatable", "UIViewAnimationOptions"]
 - ["Ps9Equatable", "UIWindow"]
@@ -376,7 +368,6 @@ depends-member:
 - ["Ps9Equatable", "defaultFont"]
 - ["Ps9Equatable", "defaultUpdateHeight"]
 - ["Ps9Equatable", "delegate"]
-- ["Ps9Equatable", "didTappedUpdate"]
 - !private ["Ps9Equatable", "font"]
 - !private ["Ps9Equatable", "frame"]
 - !private ["Ps9Equatable", "height"]
@@ -388,15 +379,15 @@ depends-member:
 - ["Ps9Equatable", "isUpdatedAddedInWindow"]
 - !private ["Ps9Equatable", "layer"]
 - !private ["Ps9Equatable", "masksToBounds"]
+- ["Ps9Equatable", "newlyDidTapped"]
 - !private ["Ps9Equatable", "normal"]
 - !private ["Ps9Equatable", "origin"]
 - !private ["Ps9Equatable", "setTitle"]
 - !private ["Ps9Equatable", "setTitleColor"]
 - ["Ps9Equatable", "shared"]
-- ["Ps9Equatable", "sharedInstance"]
 - ["Ps9Equatable", "showUpdate"]
 - !private ["Ps9Equatable", "size"]
-- ["Ps9Equatable", "systemFont"]
+- !private ["Ps9Equatable", "systemFont"]
 - !private ["Ps9Equatable", "textAlignment"]
 - ["Ps9Equatable", "textColor"]
 - !private ["Ps9Equatable", "titleLabel"]
@@ -406,7 +397,7 @@ depends-member:
 - ["Ps9Equatable", "update"]
 - ["Ps9Equatable", "updateButtonTapped"]
 - ["Ps9Equatable", "updateButtonTouchUpInside"]
-- ["Ps9Equatable", "white"]
+- !private ["Ps9Equatable", "white"]
 - !private ["Ps9Equatable", "width"]
 - !private ["Ps9Equatable", "widthOfString"]
 - ["Ps9Equatable", "window"]
@@ -419,6 +410,7 @@ depends-member:
 - !private ["Ps25ExpressibleByArrayLiteral", "touchDown"]
 - !private ["Ps25ExpressibleByArrayLiteral", "touchUpInside"]
 - !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
+- ["Ps27ExpressibleByBooleanLiteral", "init"]
 - !private ["Ps30ExpressibleByDictionaryLiteral", "Key"]
 - !private ["Ps30ExpressibleByDictionaryLiteral", "Value"]
 - !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "NSFontAttributeName"]
@@ -434,17 +426,17 @@ depends-member:
 - !private ["Ps33ExpressibleByUnicodeScalarLiteral", "size"]
 - !private ["Ps33ExpressibleByUnicodeScalarLiteral", "widthOfString"]
 - ["Sf", "deinit"]
+- ["Ps8Hashable", "Bool"]
 - !private ["Ps8Hashable", "CGAffineTransform"]
 - !private ["Ps8Hashable", "CGRect"]
 - !private ["Ps8Hashable", "NSFontAttributeName"]
 - !private ["Ps8Hashable", "NSTextAlignment"]
-- ["Ps8Hashable", "Newly"]
 - ["Ps8Hashable", "UIApplication"]
 - ["Ps8Hashable", "UIButton"]
-- ["Ps8Hashable", "UIColor"]
+- !private ["Ps8Hashable", "UIColor"]
 - !private ["Ps8Hashable", "UIControlEvents"]
 - !private ["Ps8Hashable", "UIControlState"]
-- ["Ps8Hashable", "UIFont"]
+- !private ["Ps8Hashable", "UIFont"]
 - !private ["Ps8Hashable", "UIView"]
 - !private ["Ps8Hashable", "UIViewAnimationOptions"]
 - ["Ps8Hashable", "UIWindow"]
@@ -460,7 +452,6 @@ depends-member:
 - ["Ps8Hashable", "defaultFont"]
 - ["Ps8Hashable", "defaultUpdateHeight"]
 - ["Ps8Hashable", "delegate"]
-- ["Ps8Hashable", "didTappedUpdate"]
 - !private ["Ps8Hashable", "font"]
 - !private ["Ps8Hashable", "frame"]
 - ["Ps8Hashable", "heightOffset"]
@@ -471,13 +462,13 @@ depends-member:
 - ["Ps8Hashable", "isUpdatedAddedInWindow"]
 - !private ["Ps8Hashable", "layer"]
 - !private ["Ps8Hashable", "masksToBounds"]
+- ["Ps8Hashable", "newlyDidTapped"]
 - !private ["Ps8Hashable", "setTitle"]
 - !private ["Ps8Hashable", "setTitleColor"]
 - ["Ps8Hashable", "shared"]
-- ["Ps8Hashable", "sharedInstance"]
 - ["Ps8Hashable", "showUpdate"]
 - !private ["Ps8Hashable", "size"]
-- ["Ps8Hashable", "systemFont"]
+- !private ["Ps8Hashable", "systemFont"]
 - !private ["Ps8Hashable", "textAlignment"]
 - ["Ps8Hashable", "textColor"]
 - !private ["Ps8Hashable", "titleLabel"]
@@ -485,16 +476,18 @@ depends-member:
 - ["Ps8Hashable", "update"]
 - ["Ps8Hashable", "updateButtonTapped"]
 - ["Ps8Hashable", "updateButtonTouchUpInside"]
-- ["Ps8Hashable", "white"]
+- !private ["Ps8Hashable", "white"]
 - !private ["Ps8Hashable", "widthOfString"]
 - ["Ps8Hashable", "window"]
 - ["Ps8Hashable", ""]
+- ["SQ", "deinit"]
 - !private ["Ps9Indexable", "Key"]
 - !private ["Ps9Indexable", "Value"]
 - !private ["Ps13IndexableBase", "Key"]
 - !private ["Ps13IndexableBase", "Value"]
 - !private ["Ps25LosslessStringConvertible", "NSFontAttributeName"]
 - !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
+- ["Ps25LosslessStringConvertible", "init"]
 - !private ["Ps25LosslessStringConvertible", "size"]
 - !private ["Ps25LosslessStringConvertible", "widthOfString"]
 - !private ["Ps10MirrorPath", "NSFontAttributeName"]
@@ -517,12 +510,12 @@ depends-member:
 - !private ["PSo8NSCoding", "textAlignment"]
 - !private ["PSo8NSCoding", "titleLabel"]
 - !private ["PSo8NSCoding", "transform"]
-- ["PSo8NSCoding", "white"]
+- !private ["PSo8NSCoding", "white"]
 - !private ["PSo8NSCoding", "widthOfString"]
-- ["PSo9NSCopying", "init"]
+- !private ["PSo9NSCopying", "init"]
 - !private ["PSo9NSCopying", "size"]
-- ["PSo9NSCopying", "systemFont"]
-- ["PSo9NSCopying", "white"]
+- !private ["PSo9NSCopying", "systemFont"]
+- !private ["PSo9NSCopying", "white"]
 - !private ["PSo9NSCopying", "widthOfString"]
 - !private ["PSo16NSMutableCopying", "size"]
 - !private ["PSo16NSMutableCopying", "widthOfString"]
@@ -531,7 +524,6 @@ depends-member:
 - ["CSo8NSObject", "CGFloat"]
 - !private ["CSo8NSObject", "CGRect"]
 - !private ["CSo8NSObject", "NSTextAlignment"]
-- ["CSo8NSObject", "Newly"]
 - ["CSo8NSObject", "NewlyDelegate"]
 - ["CSo8NSObject", "String"]
 - ["CSo8NSObject", "TimeInterval"]
@@ -543,7 +535,6 @@ depends-member:
 - ["CSo8NSObject", "UIFont"]
 - !private ["CSo8NSObject", "UIView"]
 - !private ["CSo8NSObject", "UIViewAnimationOptions"]
-- ["CSo8NSObject", "UIViewController"]
 - ["CSo8NSObject", "UIWindow"]
 - ["CSo8NSObject", "Void"]
 - !private ["CSo8NSObject", "addSubview"]
@@ -556,9 +547,8 @@ depends-member:
 - !private ["CSo8NSObject", "cornerRadius"]
 - ["CSo8NSObject", "defaultFont"]
 - ["CSo8NSObject", "defaultUpdateHeight"]
-- !private ["CSo8NSObject", "deinit"]
+- ["CSo8NSObject", "deinit"]
 - ["CSo8NSObject", "delegate"]
-- ["CSo8NSObject", "didTappedUpdate"]
 - !private ["CSo8NSObject", "font"]
 - !private ["CSo8NSObject", "frame"]
 - ["CSo8NSObject", "heightOffset"]
@@ -569,13 +559,13 @@ depends-member:
 - ["CSo8NSObject", "isUpdatedAddedInWindow"]
 - !private ["CSo8NSObject", "layer"]
 - !private ["CSo8NSObject", "masksToBounds"]
+- ["CSo8NSObject", "newlyDidTapped"]
 - !private ["CSo8NSObject", "setTitle"]
 - !private ["CSo8NSObject", "setTitleColor"]
 - ["CSo8NSObject", "shared"]
-- ["CSo8NSObject", "sharedInstance"]
 - ["CSo8NSObject", "showUpdate"]
 - !private ["CSo8NSObject", "size"]
-- ["CSo8NSObject", "systemFont"]
+- !private ["CSo8NSObject", "systemFont"]
 - !private ["CSo8NSObject", "textAlignment"]
 - ["CSo8NSObject", "textColor"]
 - !private ["CSo8NSObject", "titleLabel"]
@@ -583,20 +573,20 @@ depends-member:
 - ["CSo8NSObject", "update"]
 - ["CSo8NSObject", "updateButtonTapped"]
 - ["CSo8NSObject", "updateButtonTouchUpInside"]
-- ["CSo8NSObject", "white"]
+- !private ["CSo8NSObject", "white"]
 - !private ["CSo8NSObject", "widthOfString"]
 - ["CSo8NSObject", "window"]
 - ["CSo8NSObject", ""]
+- ["PSo16NSObjectProtocol", "Bool"]
 - !private ["PSo16NSObjectProtocol", "CGAffineTransform"]
 - !private ["PSo16NSObjectProtocol", "CGRect"]
 - !private ["PSo16NSObjectProtocol", "NSTextAlignment"]
-- ["PSo16NSObjectProtocol", "Newly"]
 - ["PSo16NSObjectProtocol", "UIApplication"]
 - ["PSo16NSObjectProtocol", "UIButton"]
-- ["PSo16NSObjectProtocol", "UIColor"]
+- !private ["PSo16NSObjectProtocol", "UIColor"]
 - !private ["PSo16NSObjectProtocol", "UIControlEvents"]
 - !private ["PSo16NSObjectProtocol", "UIControlState"]
-- ["PSo16NSObjectProtocol", "UIFont"]
+- !private ["PSo16NSObjectProtocol", "UIFont"]
 - !private ["PSo16NSObjectProtocol", "UIView"]
 - !private ["PSo16NSObjectProtocol", "UIViewAnimationOptions"]
 - ["PSo16NSObjectProtocol", "UIWindow"]
@@ -611,7 +601,6 @@ depends-member:
 - ["PSo16NSObjectProtocol", "defaultFont"]
 - ["PSo16NSObjectProtocol", "defaultUpdateHeight"]
 - ["PSo16NSObjectProtocol", "delegate"]
-- ["PSo16NSObjectProtocol", "didTappedUpdate"]
 - !private ["PSo16NSObjectProtocol", "font"]
 - !private ["PSo16NSObjectProtocol", "frame"]
 - ["PSo16NSObjectProtocol", "heightOffset"]
@@ -622,13 +611,13 @@ depends-member:
 - ["PSo16NSObjectProtocol", "isUpdatedAddedInWindow"]
 - !private ["PSo16NSObjectProtocol", "layer"]
 - !private ["PSo16NSObjectProtocol", "masksToBounds"]
+- ["PSo16NSObjectProtocol", "newlyDidTapped"]
 - !private ["PSo16NSObjectProtocol", "setTitle"]
 - !private ["PSo16NSObjectProtocol", "setTitleColor"]
 - ["PSo16NSObjectProtocol", "shared"]
-- ["PSo16NSObjectProtocol", "sharedInstance"]
 - ["PSo16NSObjectProtocol", "showUpdate"]
 - !private ["PSo16NSObjectProtocol", "size"]
-- ["PSo16NSObjectProtocol", "systemFont"]
+- !private ["PSo16NSObjectProtocol", "systemFont"]
 - !private ["PSo16NSObjectProtocol", "textAlignment"]
 - ["PSo16NSObjectProtocol", "textColor"]
 - !private ["PSo16NSObjectProtocol", "titleLabel"]
@@ -636,13 +625,13 @@ depends-member:
 - ["PSo16NSObjectProtocol", "update"]
 - ["PSo16NSObjectProtocol", "updateButtonTapped"]
 - ["PSo16NSObjectProtocol", "updateButtonTouchUpInside"]
-- ["PSo16NSObjectProtocol", "white"]
+- !private ["PSo16NSObjectProtocol", "white"]
 - !private ["PSo16NSObjectProtocol", "widthOfString"]
 - ["PSo16NSObjectProtocol", "window"]
 - ["PSo16NSObjectProtocol", ""]
-- ["PSo14NSSecureCoding", "init"]
+- !private ["PSo14NSSecureCoding", "init"]
 - !private ["PSo14NSSecureCoding", "size"]
-- ["PSo14NSSecureCoding", "white"]
+- !private ["PSo14NSSecureCoding", "white"]
 - !private ["PSo14NSSecureCoding", "widthOfString"]
 - !private ["CSo8NSString", "size"]
 - !private ["CSo8NSString", "widthOfString"]
@@ -653,7 +642,6 @@ depends-member:
 - ["C5Newly5Newly", "CGFloat"]
 - !private ["C5Newly5Newly", "CGRect"]
 - !private ["C5Newly5Newly", "NSTextAlignment"]
-- ["C5Newly5Newly", "Newly"]
 - ["C5Newly5Newly", "NewlyDelegate"]
 - ["C5Newly5Newly", "String"]
 - ["C5Newly5Newly", "TimeInterval"]
@@ -665,7 +653,6 @@ depends-member:
 - ["C5Newly5Newly", "UIFont"]
 - !private ["C5Newly5Newly", "UIView"]
 - !private ["C5Newly5Newly", "UIViewAnimationOptions"]
-- ["C5Newly5Newly", "UIViewController"]
 - ["C5Newly5Newly", "UIWindow"]
 - ["C5Newly5Newly", "Void"]
 - ["C5Newly5Newly", "animationInterval"]
@@ -675,22 +662,21 @@ depends-member:
 - !private ["C5Newly5Newly", "defaultUpdateHeight"]
 - ["C5Newly5Newly", "deinit"]
 - ["C5Newly5Newly", "delegate"]
-- ["C5Newly5Newly", "didTappedUpdate"]
 - ["C5Newly5Newly", "heightOffset"]
 - ["C5Newly5Newly", "hideOnTouch"]
 - ["C5Newly5Newly", "hideUpdate"]
 - ["C5Newly5Newly", "init"]
 - ["C5Newly5Newly", "isUpdateVisible"]
 - !private ["C5Newly5Newly", "isUpdatedAddedInWindow"]
-- ["C5Newly5Newly", "sharedInstance"]
+- ["C5Newly5Newly", "newlyDidTapped"]
 - ["C5Newly5Newly", "showUpdate"]
 - ["C5Newly5Newly", "textColor"]
-- ["C5Newly5Newly", "update"]
+- !private ["C5Newly5Newly", "update"]
 - !private ["C5Newly5Newly", "updateButtonTapped"]
 - !private ["C5Newly5Newly", "updateButtonTouchUpInside"]
 - !private ["C5Newly5Newly", "window"]
 - ["P5Newly13NewlyDelegate", "Void"]
-- ["P5Newly13NewlyDelegate", "didTappedUpdate"]
+- ["P5Newly13NewlyDelegate", "newlyDidTapped"]
 - !private ["Ps9OptionSet", "curveEaseIn"]
 - !private ["Ps9OptionSet", "curveEaseInOut"]
 - !private ["Ps9OptionSet", "normal"]
@@ -783,8 +769,8 @@ depends-member:
 - !private ["CSo8UIButton", "titleLabel"]
 - !private ["CSo8UIButton", "transform"]
 - ["CSo7UIColor", "deinit"]
-- ["CSo7UIColor", "init"]
-- ["CSo7UIColor", "white"]
+- !private ["CSo7UIColor", "init"]
+- !private ["CSo7UIColor", "white"]
 - !private ["PSo30UIContentSizeCategoryAdjusting", "font"]
 - !private ["PSo30UIContentSizeCategoryAdjusting", "textAlignment"]
 - !private ["CSo9UIControl", "addTarget"]
@@ -859,7 +845,7 @@ depends-member:
 - !private ["PSo11UIFocusItem", "titleLabel"]
 - !private ["PSo11UIFocusItem", "transform"]
 - ["CSo6UIFont", "deinit"]
-- ["CSo6UIFont", "systemFont"]
+- !private ["CSo6UIFont", "systemFont"]
 - ["CSo7UILabel", "deinit"]
 - !private ["CSo7UILabel", "font"]
 - !private ["CSo7UILabel", "textAlignment"]
@@ -945,6 +931,7 @@ depends-member:
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "titleLabel"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "transform"]
 - !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
+- ["Ps35_ExpressibleByBuiltinBooleanLiteral", "init"]
 - !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "NSFontAttributeName"]
 - !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "size"]
 - !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "widthOfString"]
@@ -957,21 +944,21 @@ depends-member:
 - !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "NSFontAttributeName"]
 - !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "size"]
 - !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "widthOfString"]
-- ["Ps26_ExpressibleByColorLiteral", "init"]
-- ["Ps26_ExpressibleByColorLiteral", "white"]
+- !private ["Ps26_ExpressibleByColorLiteral", "init"]
+- !private ["Ps26_ExpressibleByColorLiteral", "white"]
 - !private ["Ps35_HasCustomAnyHashableRepresentation", "size"]
 - !private ["Ps35_HasCustomAnyHashableRepresentation", "widthOfString"]
+- ["Ps9_Hashable", "Bool"]
 - !private ["Ps9_Hashable", "CGAffineTransform"]
 - !private ["Ps9_Hashable", "CGRect"]
 - !private ["Ps9_Hashable", "NSFontAttributeName"]
 - !private ["Ps9_Hashable", "NSTextAlignment"]
-- ["Ps9_Hashable", "Newly"]
 - ["Ps9_Hashable", "UIApplication"]
 - ["Ps9_Hashable", "UIButton"]
-- ["Ps9_Hashable", "UIColor"]
+- !private ["Ps9_Hashable", "UIColor"]
 - !private ["Ps9_Hashable", "UIControlEvents"]
 - !private ["Ps9_Hashable", "UIControlState"]
-- ["Ps9_Hashable", "UIFont"]
+- !private ["Ps9_Hashable", "UIFont"]
 - !private ["Ps9_Hashable", "UIView"]
 - !private ["Ps9_Hashable", "UIViewAnimationOptions"]
 - ["Ps9_Hashable", "UIWindow"]
@@ -987,7 +974,6 @@ depends-member:
 - ["Ps9_Hashable", "defaultFont"]
 - ["Ps9_Hashable", "defaultUpdateHeight"]
 - ["Ps9_Hashable", "delegate"]
-- ["Ps9_Hashable", "didTappedUpdate"]
 - !private ["Ps9_Hashable", "font"]
 - !private ["Ps9_Hashable", "frame"]
 - ["Ps9_Hashable", "heightOffset"]
@@ -998,13 +984,13 @@ depends-member:
 - ["Ps9_Hashable", "isUpdatedAddedInWindow"]
 - !private ["Ps9_Hashable", "layer"]
 - !private ["Ps9_Hashable", "masksToBounds"]
+- ["Ps9_Hashable", "newlyDidTapped"]
 - !private ["Ps9_Hashable", "setTitle"]
 - !private ["Ps9_Hashable", "setTitleColor"]
 - ["Ps9_Hashable", "shared"]
-- ["Ps9_Hashable", "sharedInstance"]
 - ["Ps9_Hashable", "showUpdate"]
 - !private ["Ps9_Hashable", "size"]
-- ["Ps9_Hashable", "systemFont"]
+- !private ["Ps9_Hashable", "systemFont"]
 - !private ["Ps9_Hashable", "textAlignment"]
 - ["Ps9_Hashable", "textColor"]
 - !private ["Ps9_Hashable", "titleLabel"]
@@ -1012,7 +998,7 @@ depends-member:
 - ["Ps9_Hashable", "update"]
 - ["Ps9_Hashable", "updateButtonTapped"]
 - ["Ps9_Hashable", "updateButtonTouchUpInside"]
-- ["Ps9_Hashable", "white"]
+- !private ["Ps9_Hashable", "white"]
 - !private ["Ps9_Hashable", "widthOfString"]
 - ["Ps9_Hashable", "window"]
 - ["Ps9_Hashable", ""]
@@ -1020,6 +1006,7 @@ depends-member:
 - !private ["Ps21_ObjectiveCBridgeable", "NSFontAttributeName"]
 - !private ["Ps21_ObjectiveCBridgeable", "Value"]
 - !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- ["Ps21_ObjectiveCBridgeable", "init"]
 - !private ["Ps21_ObjectiveCBridgeable", "size"]
 - !private ["Ps21_ObjectiveCBridgeable", "widthOfString"]
 depends-nominal:
@@ -1037,14 +1024,14 @@ depends-nominal:
 - !private "Ps10Collection"
 - !private "Ps10Comparable"
 - "Ps28CustomDebugStringConvertible"
-- !private "Ps29CustomPlaygroundQuickLookable"
-- !private "Ps17CustomReflectable"
+- "Ps29CustomPlaygroundQuickLookable"
+- "Ps17CustomReflectable"
 - "Ps23CustomStringConvertible"
 - "Vs10Dictionary"
 - "Sd"
 - "Ps9Equatable"
 - !private "Ps25ExpressibleByArrayLiteral"
-- !private "Ps27ExpressibleByBooleanLiteral"
+- "Ps27ExpressibleByBooleanLiteral"
 - !private "Ps30ExpressibleByDictionaryLiteral"
 - !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
 - !private "Ps32ExpressibleByStringInterpolation"
@@ -1052,16 +1039,17 @@ depends-nominal:
 - !private "Ps33ExpressibleByUnicodeScalarLiteral"
 - "Sf"
 - "Ps8Hashable"
+- "SQ"
 - !private "Ps9Indexable"
 - !private "Ps13IndexableBase"
-- !private "Ps25LosslessStringConvertible"
+- "Ps25LosslessStringConvertible"
 - !private "Ps10MirrorPath"
 - "PSo8NSCoding"
-- "PSo9NSCopying"
+- !private "PSo9NSCopying"
 - !private "PSo16NSMutableCopying"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
-- "PSo14NSSecureCoding"
+- !private "PSo14NSSecureCoding"
 - !private "CSo8NSString"
 - "OSC15NSTextAlignment"
 - "C5Newly5Newly"
@@ -1099,15 +1087,15 @@ depends-nominal:
 - "VSC22UIViewAnimationOptions"
 - "CSo8UIWindow"
 - "Ps37_DefaultCustomPlaygroundQuickLookable"
-- !private "Ps35_ExpressibleByBuiltinBooleanLiteral"
+- "Ps35_ExpressibleByBuiltinBooleanLiteral"
 - !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
 - !private "Ps34_ExpressibleByBuiltinStringLiteral"
 - !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
 - !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
-- "Ps26_ExpressibleByColorLiteral"
+- !private "Ps26_ExpressibleByColorLiteral"
 - !private "Ps35_HasCustomAnyHashableRepresentation"
 - "Ps9_Hashable"
-- !private "Ps21_ObjectiveCBridgeable"
+- "Ps21_ObjectiveCBridgeable"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
@@ -1121,4 +1109,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
-interface-hash: "478e4d81d1d39059e5d5ccd9900168d8"
+interface-hash: "261078f1de821eb292e7bc52ecfffb57"
