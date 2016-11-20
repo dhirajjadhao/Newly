@@ -6,6 +6,11 @@
 
 `Newly` is a drop in solution to add Twitter/Facebook/Linkedin style, new updates/tweets/posts available button. It can be used to notify user about new content availability and can other actions can be triggers using its delegate method.
 
+
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Usage](#usage)
+
 ## Requirements
 
 - iOS 10.0+
