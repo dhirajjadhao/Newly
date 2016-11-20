@@ -1,4 +1,4 @@
-![newly](https://cloud.githubusercontent.com/assets/2684979/20461326/7720577c-af20-11e6-9bd0-3bddef893e10.png)
+![newly 2](https://cloud.githubusercontent.com/assets/2684979/20462091/9357647c-af38-11e6-992f-07b9c263bb59.png)
 
 
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/Newly.svg)](https://img.shields.io/cocoapods/v/Newly.svg)
