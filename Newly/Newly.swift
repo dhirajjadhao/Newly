@@ -22,10 +22,9 @@ public class Newly: NSObject {
     
     //MARK: Internal Constants
     private var isUpdatedAddedInWindow:Bool?
-    private var defaultFont:UIFont!
     private let app = UIApplication.shared.delegate
     private var window = UIWindow()
-    private var defaultUpdateHeight:CGFloat!
+    
     
     //MARK: Properties
     
@@ -40,8 +39,11 @@ public class Newly: NSObject {
     /// It defines whether Newly should hide on touch, default is true.
     public var hideOnTouch = Bool()
     
-    /// Animation interval to show and hide newly on screen.
-    public var animationInterval:TimeInterval?
+    /// Animation interval to show newly on screen.
+    public var showAnimationInterval:TimeInterval?
+    
+    /// Animation interval to hide newly from screen.
+    public var hideAnimationInterval:TimeInterval?
     
     /// Height from top at which Newly should be displayed.
     public var heightOffset:CGFloat?
@@ -52,21 +54,35 @@ public class Newly: NSObject {
     /// Text colour for Newly
     public var textColor:UIColor?
     
+    /// Text Font for Newly
+    public var textFont:UIFont!
+    
+    /// Height of Newly
+    public var height:CGFloat!
+    
+    /// Border Width of Newly
+    public var borderWidth:CGFloat!
+    
+    /// Border Colour for Newly
+    public var borderColor:UIColor?
     
     /// Initializers
-
+    
     public override init() {
         super.init()
         
         isUpdatedAddedInWindow = false
-        defaultFont = UIFont.systemFont(ofSize: 12.5)
-        defaultUpdateHeight = 30
+        textFont = UIFont.systemFont(ofSize: 12.5)
+        height = 30
         isUpdateVisible = false
         hideOnTouch = true
-        animationInterval = 1.0
+        showAnimationInterval = 1.0
+        hideAnimationInterval = 1.0
         heightOffset = 78.0
         backgroundColor = UIColor(colorLiteralRed: 0, green: 153.0/255.0, blue: 229.0/255.0, alpha: 1.0)
         textColor = UIColor.white
+        borderWidth = 0.0
+        borderColor = UIColor.darkGray
     }
     
     
@@ -85,22 +101,24 @@ public class Newly: NSObject {
         
         if !isUpdatedAddedInWindow! {
             
-            var width = message.widthOfString(usingFont: defaultFont)
+            var width = message.widthOfString(usingFont: textFont)
             if width >= window.frame.width {
                 width = window.frame.width - 10.0
             }
-            update = UIButton(frame: CGRect(x: 0, y: -50, width: width, height: defaultUpdateHeight))
+            update = UIButton(frame: CGRect(x: 0, y: -50, width: width, height: height))
             update.setTitle(message, for: UIControlState.normal)
             update.center.x = window.frame.width/2.0
             update.backgroundColor = backgroundColor
-            update.layer.cornerRadius = defaultUpdateHeight/2.0
+            update.layer.cornerRadius = height/2.0
             update.layer.masksToBounds = true
             update.titleLabel?.textAlignment = NSTextAlignment.center
             update.setTitleColor(textColor, for: UIControlState.normal)
-            update.titleLabel?.font = defaultFont
-            
+            update.titleLabel?.font = textFont
+            update.layer.borderWidth = borderWidth
+            update.layer.borderColor = borderColor?.cgColor
             update.addTarget(self, action: #selector(updateButtonTapped), for: UIControlEvents.touchDown)
             update.addTarget(self, action: #selector(updateButtonTouchUpInside), for: UIControlEvents.touchUpInside)
+            update.addTarget(self, action: #selector(updateButtonTouchUpInside), for: UIControlEvents.touchDragExit)
             window.addSubview(update)
             isUpdatedAddedInWindow = true
             
@@ -110,7 +128,7 @@ public class Newly: NSObject {
             
             isUpdateVisible = true
             
-            UIView.animate(withDuration: animationInterval!, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.curveEaseIn, animations: {
+            UIView.animate(withDuration: showAnimationInterval!, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.curveEaseIn, animations: {
                 
                 self.update.frame.origin.y = self.heightOffset!
                 
@@ -130,7 +148,7 @@ public class Newly: NSObject {
         isUpdateVisible = false
         isUpdatedAddedInWindow = false
         
-        UIView.animate(withDuration: animationInterval!, delay: 0.4, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.8, options: UIViewAnimationOptions.curveEaseInOut, animations: {
+        UIView.animate(withDuration: hideAnimationInterval!, delay: 0.4, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.8, options: UIViewAnimationOptions.curveEaseInOut, animations: {
             
             self.update.frame.origin.y = -50
             
@@ -177,7 +195,7 @@ extension String {
     func widthOfString(usingFont font: UIFont) -> CGFloat {
         let fontAttributes = [NSFontAttributeName: font]
         let size = self.size(attributes: fontAttributes)
-        return size.width+40
+        return size.width+30
     }
     
     func heightOfString(usingFont font: UIFont) -> CGFloat {
