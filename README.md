@@ -29,7 +29,7 @@
 $ gem install cocoapods
 ```
 
-> CocoaPods 1.1.0+ is required to build Newly 0.2.0.
+> CocoaPods 1.1.0+ is required to build Newly.
 
 To integrate Newly into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
