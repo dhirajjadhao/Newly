@@ -3,6 +3,8 @@
 
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/Newly.svg)](https://img.shields.io/cocoapods/v/Newly.svg)
 [![Platform](https://img.shields.io/cocoapods/p/Newly.svg?style=flat)](http://cocoadocs.org/docsets/Newly)
+<a href="https://developer.apple.com/swift"><img src="https://img.shields.io/badge/swift3-compatible-4BC51D.svg?style=flat" alt="Swift 3 compatible" /></a>
+<a href="https://raw.githubusercontent.com/xmartlabs/Eureka/master/LICENSE"><img src="http://img.shields.io/badge/license-MIT-blue.svg?style=flat" alt="License: MIT" /></a>
 
 `Newly` is a drop in solution to add Twitter/Facebook/Linkedin style, new updates/tweets/posts available button. It can be used to notify user about new content availability and can other actions can be triggers using its delegate method.
 
