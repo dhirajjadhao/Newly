@@ -10,7 +10,7 @@ s.license = { :type => "MIT", :file => "LICENSE" }
 s.author = { "Dhiraj Jadhao" => "[dhirajjadhao@gmail.com" }
 
 s.homepage = "https://github.com/dhirajjadhao/Newly"
-s.source = { :git => "https://github.com/dhirajjadhao/Newly.git", :tag => "0.3.0"}
+s.source = { :git => "https://github.com/dhirajjadhao/Newly.git", :tag => "0.3.1"}
 
 s.framework = "UIKit"
 s.source_files = "Newly/**/*.{swift}"
