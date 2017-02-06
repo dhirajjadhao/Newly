@@ -13,46 +13,46 @@ provides-member:
 - ["SS", "heightOfString"]
 provides-dynamic-lookup:
 - "hideOnTouch"
+- "updateButtonTapped"
+- "borderColor"
 - "updateButtonTouchUpInside"
+- "isUpdateVisible"
+- "textColor"
+- "showUpdate"
+- "backgroundColor"
 - "textFont"
 - "newlyDidTapped"
-- "showUpdate"
-- "textColor"
-- "isUpdateVisible"
-- "updateButtonTapped"
-- "backgroundColor"
-- "borderColor"
 - "hideUpdate"
 depends-top-level:
-- "UIApplication"
-- !private "UIControlEvents"
-- !private "UIViewAnimationOptions"
-- !private "-"
+- !private "!"
+- !private "NSFontAttributeName"
+- "NewlyDelegate"
+- "AssignmentPrecedence"
+- "UIButton"
+- "TimeInterval"
+- !private "UIControlState"
+- !private ">="
+- !private "/"
+- !private "CGAffineTransform"
+- !private "Dictionary"
+- "String"
+- "CGFloat"
+- "UIWindow"
 - "Void"
 - "UIFont"
-- "UIWindow"
-- "UIColor"
-- "Newly"
-- "String"
-- "Bool"
-- "UIButton"
-- !private "BooleanLiteralType"
 - !private "UIView"
-- !private "Dictionary"
-- !private "UIControlState"
-- "CGFloat"
-- !private "NSTextAlignment"
-- !private "NSFontAttributeName"
-- !private "+"
-- !private "CGRect"
-- "NewlyDelegate"
 - "NSObject"
-- "TimeInterval"
-- !private "CGAffineTransform"
-- "AssignmentPrecedence"
-- !private "/"
-- !private "!"
-- !private ">="
+- "UIApplication"
+- !private "UIControlEvents"
+- !private "BooleanLiteralType"
+- !private "CGRect"
+- "Newly"
+- !private "UIViewAnimationOptions"
+- !private "+"
+- !private "NSTextAlignment"
+- "UIColor"
+- "Bool"
+- !private "-"
 depends-member:
 - ["Ps9AnyObject", "Bool"]
 - !private ["Ps9AnyObject", "CGAffineTransform"]
@@ -70,7 +70,6 @@ depends-member:
 - !private ["Ps9AnyObject", "addSubview"]
 - !private ["Ps9AnyObject", "addTarget"]
 - !private ["Ps9AnyObject", "animate"]
-- ["Ps9AnyObject", "animationInterval"]
 - ["Ps9AnyObject", "app"]
 - ["Ps9AnyObject", "backgroundColor"]
 - ["Ps9AnyObject", "borderColor"]
@@ -84,6 +83,7 @@ depends-member:
 - !private ["Ps9AnyObject", "frame"]
 - ["Ps9AnyObject", "height"]
 - ["Ps9AnyObject", "heightOffset"]
+- ["Ps9AnyObject", "hideAnimationInterval"]
 - ["Ps9AnyObject", "hideOnTouch"]
 - ["Ps9AnyObject", "hideUpdate"]
 - ["Ps9AnyObject", "init"]
@@ -95,6 +95,7 @@ depends-member:
 - !private ["Ps9AnyObject", "setTitle"]
 - !private ["Ps9AnyObject", "setTitleColor"]
 - ["Ps9AnyObject", "shared"]
+- ["Ps9AnyObject", "showAnimationInterval"]
 - ["Ps9AnyObject", "showUpdate"]
 - !private ["Ps9AnyObject", "size"]
 - !private ["Ps9AnyObject", "systemFont"]
@@ -168,7 +169,6 @@ depends-member:
 - !private ["Ps7CVarArg", "addSubview"]
 - !private ["Ps7CVarArg", "addTarget"]
 - !private ["Ps7CVarArg", "animate"]
-- ["Ps7CVarArg", "animationInterval"]
 - ["Ps7CVarArg", "app"]
 - ["Ps7CVarArg", "backgroundColor"]
 - ["Ps7CVarArg", "borderColor"]
@@ -182,6 +182,7 @@ depends-member:
 - !private ["Ps7CVarArg", "frame"]
 - ["Ps7CVarArg", "height"]
 - ["Ps7CVarArg", "heightOffset"]
+- ["Ps7CVarArg", "hideAnimationInterval"]
 - ["Ps7CVarArg", "hideOnTouch"]
 - ["Ps7CVarArg", "hideUpdate"]
 - ["Ps7CVarArg", "init"]
@@ -193,6 +194,7 @@ depends-member:
 - !private ["Ps7CVarArg", "setTitle"]
 - !private ["Ps7CVarArg", "setTitleColor"]
 - ["Ps7CVarArg", "shared"]
+- ["Ps7CVarArg", "showAnimationInterval"]
 - ["Ps7CVarArg", "showUpdate"]
 - !private ["Ps7CVarArg", "size"]
 - !private ["Ps7CVarArg", "systemFont"]
@@ -232,7 +234,6 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "addSubview"]
 - !private ["Ps28CustomDebugStringConvertible", "addTarget"]
 - !private ["Ps28CustomDebugStringConvertible", "animate"]
-- ["Ps28CustomDebugStringConvertible", "animationInterval"]
 - ["Ps28CustomDebugStringConvertible", "app"]
 - ["Ps28CustomDebugStringConvertible", "backgroundColor"]
 - ["Ps28CustomDebugStringConvertible", "borderColor"]
@@ -246,6 +247,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "frame"]
 - ["Ps28CustomDebugStringConvertible", "height"]
 - ["Ps28CustomDebugStringConvertible", "heightOffset"]
+- ["Ps28CustomDebugStringConvertible", "hideAnimationInterval"]
 - ["Ps28CustomDebugStringConvertible", "hideOnTouch"]
 - ["Ps28CustomDebugStringConvertible", "hideUpdate"]
 - ["Ps28CustomDebugStringConvertible", "init"]
@@ -258,6 +260,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "setTitle"]
 - !private ["Ps28CustomDebugStringConvertible", "setTitleColor"]
 - ["Ps28CustomDebugStringConvertible", "shared"]
+- ["Ps28CustomDebugStringConvertible", "showAnimationInterval"]
 - ["Ps28CustomDebugStringConvertible", "showUpdate"]
 - !private ["Ps28CustomDebugStringConvertible", "size"]
 - !private ["Ps28CustomDebugStringConvertible", "systemFont"]
@@ -318,7 +321,6 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "addSubview"]
 - !private ["Ps23CustomStringConvertible", "addTarget"]
 - !private ["Ps23CustomStringConvertible", "animate"]
-- ["Ps23CustomStringConvertible", "animationInterval"]
 - ["Ps23CustomStringConvertible", "app"]
 - ["Ps23CustomStringConvertible", "backgroundColor"]
 - ["Ps23CustomStringConvertible", "borderColor"]
@@ -332,6 +334,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "frame"]
 - ["Ps23CustomStringConvertible", "height"]
 - ["Ps23CustomStringConvertible", "heightOffset"]
+- ["Ps23CustomStringConvertible", "hideAnimationInterval"]
 - ["Ps23CustomStringConvertible", "hideOnTouch"]
 - ["Ps23CustomStringConvertible", "hideUpdate"]
 - ["Ps23CustomStringConvertible", "init"]
@@ -343,6 +346,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "setTitle"]
 - !private ["Ps23CustomStringConvertible", "setTitleColor"]
 - ["Ps23CustomStringConvertible", "shared"]
+- ["Ps23CustomStringConvertible", "showAnimationInterval"]
 - ["Ps23CustomStringConvertible", "showUpdate"]
 - !private ["Ps23CustomStringConvertible", "size"]
 - !private ["Ps23CustomStringConvertible", "systemFont"]
@@ -380,7 +384,6 @@ depends-member:
 - !private ["Ps9Equatable", "addSubview"]
 - !private ["Ps9Equatable", "addTarget"]
 - !private ["Ps9Equatable", "animate"]
-- ["Ps9Equatable", "animationInterval"]
 - ["Ps9Equatable", "app"]
 - ["Ps9Equatable", "backgroundColor"]
 - ["Ps9Equatable", "borderColor"]
@@ -396,6 +399,7 @@ depends-member:
 - !private ["Ps9Equatable", "frame"]
 - ["Ps9Equatable", "height"]
 - ["Ps9Equatable", "heightOffset"]
+- ["Ps9Equatable", "hideAnimationInterval"]
 - ["Ps9Equatable", "hideOnTouch"]
 - ["Ps9Equatable", "hideUpdate"]
 - ["Ps9Equatable", "init"]
@@ -409,6 +413,7 @@ depends-member:
 - !private ["Ps9Equatable", "setTitle"]
 - !private ["Ps9Equatable", "setTitleColor"]
 - ["Ps9Equatable", "shared"]
+- ["Ps9Equatable", "showAnimationInterval"]
 - ["Ps9Equatable", "showUpdate"]
 - !private ["Ps9Equatable", "size"]
 - !private ["Ps9Equatable", "systemFont"]
@@ -471,7 +476,6 @@ depends-member:
 - !private ["Ps8Hashable", "addSubview"]
 - !private ["Ps8Hashable", "addTarget"]
 - !private ["Ps8Hashable", "animate"]
-- ["Ps8Hashable", "animationInterval"]
 - ["Ps8Hashable", "app"]
 - ["Ps8Hashable", "backgroundColor"]
 - ["Ps8Hashable", "borderColor"]
@@ -485,6 +489,7 @@ depends-member:
 - !private ["Ps8Hashable", "frame"]
 - ["Ps8Hashable", "height"]
 - ["Ps8Hashable", "heightOffset"]
+- ["Ps8Hashable", "hideAnimationInterval"]
 - ["Ps8Hashable", "hideOnTouch"]
 - ["Ps8Hashable", "hideUpdate"]
 - ["Ps8Hashable", "init"]
@@ -496,6 +501,7 @@ depends-member:
 - !private ["Ps8Hashable", "setTitle"]
 - !private ["Ps8Hashable", "setTitleColor"]
 - ["Ps8Hashable", "shared"]
+- ["Ps8Hashable", "showAnimationInterval"]
 - ["Ps8Hashable", "showUpdate"]
 - !private ["Ps8Hashable", "size"]
 - !private ["Ps8Hashable", "systemFont"]
@@ -577,7 +583,6 @@ depends-member:
 - !private ["CSo8NSObject", "addSubview"]
 - !private ["CSo8NSObject", "addTarget"]
 - !private ["CSo8NSObject", "animate"]
-- ["CSo8NSObject", "animationInterval"]
 - ["CSo8NSObject", "app"]
 - ["CSo8NSObject", "backgroundColor"]
 - ["CSo8NSObject", "borderColor"]
@@ -592,6 +597,7 @@ depends-member:
 - !private ["CSo8NSObject", "frame"]
 - ["CSo8NSObject", "height"]
 - ["CSo8NSObject", "heightOffset"]
+- ["CSo8NSObject", "hideAnimationInterval"]
 - ["CSo8NSObject", "hideOnTouch"]
 - ["CSo8NSObject", "hideUpdate"]
 - ["CSo8NSObject", "init"]
@@ -603,6 +609,7 @@ depends-member:
 - !private ["CSo8NSObject", "setTitle"]
 - !private ["CSo8NSObject", "setTitleColor"]
 - ["CSo8NSObject", "shared"]
+- ["CSo8NSObject", "showAnimationInterval"]
 - ["CSo8NSObject", "showUpdate"]
 - !private ["CSo8NSObject", "size"]
 - !private ["CSo8NSObject", "systemFont"]
@@ -634,7 +641,6 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "addSubview"]
 - !private ["PSo16NSObjectProtocol", "addTarget"]
 - !private ["PSo16NSObjectProtocol", "animate"]
-- ["PSo16NSObjectProtocol", "animationInterval"]
 - ["PSo16NSObjectProtocol", "app"]
 - ["PSo16NSObjectProtocol", "backgroundColor"]
 - ["PSo16NSObjectProtocol", "borderColor"]
@@ -648,6 +654,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "frame"]
 - ["PSo16NSObjectProtocol", "height"]
 - ["PSo16NSObjectProtocol", "heightOffset"]
+- ["PSo16NSObjectProtocol", "hideAnimationInterval"]
 - ["PSo16NSObjectProtocol", "hideOnTouch"]
 - ["PSo16NSObjectProtocol", "hideUpdate"]
 - ["PSo16NSObjectProtocol", "init"]
@@ -659,6 +666,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "setTitle"]
 - !private ["PSo16NSObjectProtocol", "setTitleColor"]
 - ["PSo16NSObjectProtocol", "shared"]
+- ["PSo16NSObjectProtocol", "showAnimationInterval"]
 - ["PSo16NSObjectProtocol", "showUpdate"]
 - !private ["PSo16NSObjectProtocol", "size"]
 - !private ["PSo16NSObjectProtocol", "systemFont"]
@@ -702,7 +710,6 @@ depends-member:
 - !private ["C5Newly5Newly", "UIViewAnimationOptions"]
 - ["C5Newly5Newly", "UIWindow"]
 - ["C5Newly5Newly", "Void"]
-- ["C5Newly5Newly", "animationInterval"]
 - !private ["C5Newly5Newly", "app"]
 - ["C5Newly5Newly", "backgroundColor"]
 - ["C5Newly5Newly", "borderColor"]
@@ -711,12 +718,14 @@ depends-member:
 - ["C5Newly5Newly", "delegate"]
 - ["C5Newly5Newly", "height"]
 - ["C5Newly5Newly", "heightOffset"]
+- ["C5Newly5Newly", "hideAnimationInterval"]
 - ["C5Newly5Newly", "hideOnTouch"]
 - ["C5Newly5Newly", "hideUpdate"]
 - ["C5Newly5Newly", "init"]
 - ["C5Newly5Newly", "isUpdateVisible"]
 - !private ["C5Newly5Newly", "isUpdatedAddedInWindow"]
 - ["C5Newly5Newly", "newlyDidTapped"]
+- ["C5Newly5Newly", "showAnimationInterval"]
 - ["C5Newly5Newly", "showUpdate"]
 - ["C5Newly5Newly", "textColor"]
 - ["C5Newly5Newly", "textFont"]
@@ -1023,7 +1032,6 @@ depends-member:
 - !private ["Ps9_Hashable", "addSubview"]
 - !private ["Ps9_Hashable", "addTarget"]
 - !private ["Ps9_Hashable", "animate"]
-- ["Ps9_Hashable", "animationInterval"]
 - ["Ps9_Hashable", "app"]
 - ["Ps9_Hashable", "backgroundColor"]
 - ["Ps9_Hashable", "borderColor"]
@@ -1037,6 +1045,7 @@ depends-member:
 - !private ["Ps9_Hashable", "frame"]
 - ["Ps9_Hashable", "height"]
 - ["Ps9_Hashable", "heightOffset"]
+- ["Ps9_Hashable", "hideAnimationInterval"]
 - ["Ps9_Hashable", "hideOnTouch"]
 - ["Ps9_Hashable", "hideUpdate"]
 - ["Ps9_Hashable", "init"]
@@ -1048,6 +1057,7 @@ depends-member:
 - !private ["Ps9_Hashable", "setTitle"]
 - !private ["Ps9_Hashable", "setTitleColor"]
 - ["Ps9_Hashable", "shared"]
+- ["Ps9_Hashable", "showAnimationInterval"]
 - ["Ps9_Hashable", "showUpdate"]
 - !private ["Ps9_Hashable", "size"]
 - !private ["Ps9_Hashable", "systemFont"]
@@ -1171,4 +1181,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/SwiftOnoneSupport.swiftmodule"
-interface-hash: "ce778877154a67c8c244dedc7079c0e6"
+interface-hash: "ae0d9c0110416b47b8d62472a9fd2bf3"
