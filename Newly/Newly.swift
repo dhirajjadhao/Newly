@@ -59,6 +59,26 @@ public class Newly: NSObject {
     
     /// Height of Newly
     public var height:CGFloat!
+
+    /// Y live position of Newly
+    public var yPosition: CGFloat {
+      get {
+        return update.frame.origin.y
+      }
+      set {
+        update.frame.origin.y = newValue
+      }
+    }
+  
+    /// Current text of Newly
+    public var text: String? {
+      get {
+        return update.titleLabel?.text
+      }
+      set {
+        update.setTitle(newValue, for: .normal)
+      }
+    }
     
     /// Border Width of Newly
     public var borderWidth:CGFloat!
