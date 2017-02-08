@@ -1,5 +1,5 @@
 version: "Apple Swift version 3.0 (swiftlang-800.0.46.2 clang-800.0.38)"
 options: "8d52358147ace9778a20920bd2f68bbd"
-build_time: [533555841, 110840000]
+build_time: [534245765, 89397000]
 inputs:
-  "/Users/prajaktakulkarni/Documents/My Pods/Newly/Newly/Newly.swift": [533374754, 0]
+  "/Users/prajaktakulkarni/Documents/My Pods/Newly/Newly/Newly.swift": [533555846, 0]
