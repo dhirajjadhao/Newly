@@ -113,21 +113,22 @@ public class Newly: NSObject {
     ///Shows Newly updates available button with animation
     ///
     /// - parameter message: text message to be shown in Newly update
-    
-    
-    public func showUpdate(message:String) -> Void {
+    /// - parameter view: view to display newly on (optional)
+    public func showUpdate(message:String, onView view: UIView? = nil) -> Void {
         
         window = ((app?.window)!)!
         
         if !isUpdatedAddedInWindow! {
             
+            let viewWidth = view?.frame.width ?? window.frame.width
+            
             var width = message.widthOfString(usingFont: textFont)
-            if width >= window.frame.width {
-                width = window.frame.width - 10.0
+            if width >= viewWidth {
+                width = viewWidth - 10.0
             }
             update = UIButton(frame: CGRect(x: 0, y: -50, width: width, height: height))
             update.setTitle(message, for: UIControlState.normal)
-            update.center.x = window.frame.width/2.0
+            update.center.x = viewWidth/2.0
             update.backgroundColor = backgroundColor
             update.layer.cornerRadius = height/2.0
             update.layer.masksToBounds = true
@@ -139,7 +140,7 @@ public class Newly: NSObject {
             update.addTarget(self, action: #selector(updateButtonTapped), for: UIControlEvents.touchDown)
             update.addTarget(self, action: #selector(updateButtonTouchUpInside), for: UIControlEvents.touchUpInside)
             update.addTarget(self, action: #selector(updateButtonTouchUpInside), for: UIControlEvents.touchDragExit)
-            window.addSubview(update)
+            (view ?? window).addSubview(update)
             isUpdatedAddedInWindow = true
             
         }
