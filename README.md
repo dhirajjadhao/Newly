@@ -13,6 +13,8 @@
 - [Installation](#installation)
 - [Usage](#usage)
 
+Android version of Newly will be available soon - Contributed by [Sourabh Karkal](https://github.com/Auto-Droid)
+
 ## Requirements
 
 - iOS 9.0+
