@@ -99,7 +99,7 @@ public class Newly: NSObject {
         showAnimationInterval = 1.0
         hideAnimationInterval = 1.0
         heightOffset = 78.0
-        backgroundColor = UIColor(colorLiteralRed: 0, green: 153.0/255.0, blue: 229.0/255.0, alpha: 1.0)
+        backgroundColor = UIColor(red: 0, green: 153.0/255.0, blue: 229.0/255.0, alpha: 1.0)
         textColor = UIColor.white
         borderWidth = 0.0
         borderColor = UIColor.darkGray
@@ -214,14 +214,14 @@ public class Newly: NSObject {
 extension String {
     
     func widthOfString(usingFont font: UIFont) -> CGFloat {
-        let fontAttributes = [NSFontAttributeName: font]
-        let size = self.size(attributes: fontAttributes)
+        let fontAttributes = [NSAttributedStringKey.font: font]
+        let size = self.size(withAttributes: fontAttributes)
         return size.width+30
     }
     
     func heightOfString(usingFont font: UIFont) -> CGFloat {
-        let fontAttributes = [NSFontAttributeName: font]
-        let size = self.size(attributes: fontAttributes)
+        let fontAttributes = [NSAttributedStringKey.font: font]
+        let size = self.size(withAttributes: fontAttributes)
         return size.height
     }
 }
