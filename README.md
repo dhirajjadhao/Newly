@@ -13,7 +13,7 @@
 - [Installation](#installation)
 - [Usage](#usage)
 
-Android version of Newly will be available soon - Contributed by [Sourabh Karkal](https://github.com/Auto-Droid)
+[Android version of Newly](https://github.com/Auto-Droid/Newly) - Contributed by [Sourabh Karkal](https://github.com/Auto-Droid)
 
 ## Requirements
 
