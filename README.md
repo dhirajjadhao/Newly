@@ -8,12 +8,17 @@
 
 `Newly` is a drop in solution to add Twitter/Facebook/Linkedin style, new updates/tweets/posts available button. It can be used to notify user about new content availability and can other actions can be triggers using its delegate method.
 
-
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
 
-[Android version of Newly](https://github.com/Auto-Droid/Newly) - Contributed by [Sourabh Karkal](https://github.com/Auto-Droid)
+
+## Check this library on other platforms:
+<a href="https://github.com/Auto-Droid/Newly">
+<img src="https://github.com/ramotion/navigation-stack/raw/master/Android_Java@2x.png" width="178" height="81"></a>
+
+- Contributed by [Sourabh Karkal](https://github.com/Auto-Droid)
+ 
 
 ## Requirements
 
