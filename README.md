@@ -1,6 +1,4 @@
 ![newly 2](https://cloud.githubusercontent.com/assets/2684979/20462091/9357647c-af38-11e6-992f-07b9c263bb59.png)
-
-
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/Newly.svg)](https://img.shields.io/cocoapods/v/Newly.svg)
 [![Platform](https://img.shields.io/cocoapods/p/Newly.svg?style=flat)](http://cocoadocs.org/docsets/Newly)
 <a href="https://developer.apple.com/swift"><img src="https://img.shields.io/badge/swift3-compatible-4BC51D.svg?style=flat" alt="Swift 3 compatible" /></a>
@@ -12,14 +10,12 @@
 - [Installation](#installation)
 - [Usage](#usage)
 
-
 ## Check this library on other platforms:
 <a href="https://github.com/Auto-Droid/Newly">
 <img src="https://github.com/ramotion/navigation-stack/raw/master/Android_Java@2x.png" width="178" height="81"></a>
 
 - Contributed by [Sourabh Karkal](https://github.com/Auto-Droid)
  
-
 ## Requirements
 
 - iOS 9.0+
@@ -80,7 +76,6 @@ Use this if you want to manually hide `Newly`. By default `Newly` will hide on t
 newly.hideUpdate()
 ```
 
-
 ### On Click Updates
 
 You can use `Newly` delegate to get its on click update.
@@ -103,7 +98,6 @@ extension ViewController:NewlyDelegate{
 }
 
 ```
-
 
 ### Appearance Customization 
 
