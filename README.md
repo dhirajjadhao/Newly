@@ -16,7 +16,7 @@
 - [Usage](#usage)
 
 
-## Check this library on other platforms:
+## Android Version of Newly:
 <a href="https://github.com/Auto-Droid/Newly">
 <img src="https://github.com/ramotion/navigation-stack/raw/master/Android_Java@2x.png" width="178" height="81"></a>
 
