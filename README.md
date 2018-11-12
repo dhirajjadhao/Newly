@@ -8,6 +8,9 @@
 
 `Newly` is a drop in solution to add Twitter/Facebook/Linkedin style, new updates/tweets/posts available button. It can be used to notify user about new content availability and can other actions can be triggers using its delegate method.
 
+![ezgif com-resize](https://cloud.githubusercontent.com/assets/2684979/20461445/a411dee6-af24-11e6-89da-5a67796819d6.gif)
+![ezgif com-resize-2](https://cloud.githubusercontent.com/assets/2684979/20624689/567c125a-b334-11e6-99a7-3f851f46d05d.gif)
+
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
